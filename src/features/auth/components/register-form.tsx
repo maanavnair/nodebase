@@ -35,7 +35,7 @@ const loginSchema = z.object({
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-export function LoginForm() {
+export function RegisterForm() {
     const router = useRouter();
 
     const form = useForm<LoginFormValues>({
@@ -57,10 +57,10 @@ export function LoginForm() {
             <Card>
                 <CardHeader className="text-center">
                     <CardTitle>
-                        Welcome Back
+                        Get Started
                     </CardTitle>
                     <CardDescription>
-                        Login to continue
+                        Create your account to get started
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -129,12 +129,12 @@ export function LoginForm() {
                                     </Button>
                                 </div>
                                 <div className="text-center text-sm">
-                                    Don't have an account?{" "}
+                                    Already have an account?{" "}
                                     <Link
-                                        href="/signup"
+                                        href="/login"
                                         className="underline underline-offset-4"
                                     >
-                                        Sign up
+                                        Login
                                     </Link>
                                 </div>
                             </div>
